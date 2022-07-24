@@ -18,12 +18,12 @@ public class NiveauController {
 
 
 
-    @PostMapping("/niveau/addNiveau")
+    @PostMapping("/niveau")
      public Niveau addNiveau(@RequestBody Niveau n){
         return ns.save(n);
     }
 
-    @PostMapping("/niveau/updateNiveau")
+    @PutMapping("/niveau")
 
     public Niveau updateCourse(@RequestBody Niveau n){
         return ns.updateNiveau(n);
@@ -35,12 +35,12 @@ public class NiveauController {
         ns.deleteNiveau(idNiveau);
     }
 
-    @GetMapping("/niveau/getAllNiveau")
-    public List<Niveau> getAllCourses(){
+    @GetMapping("/niveau")
+    public List<Niveau> getAllNiveau(){
         return ns.findAll();
     }
 
-    @GetMapping("/Niveau/{idNiveau}")
+    @GetMapping("/niveau/{idNiveau}")
     public Niveau getNiveau(@PathVariable Long idNiveau){
         return ns.findOne(idNiveau);
     }
