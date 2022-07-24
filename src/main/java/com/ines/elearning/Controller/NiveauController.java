@@ -25,7 +25,7 @@ public class NiveauController {
 
     @PutMapping("/niveau")
 
-    public Niveau updateCourse(@RequestBody Niveau n){
+    public Niveau updateNiveau(@RequestBody Niveau n){
         return ns.updateNiveau(n);
     }
 

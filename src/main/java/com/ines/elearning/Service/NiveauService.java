@@ -40,4 +40,7 @@ public class NiveauService implements INiveauService{
     public List<Niveau> findAll() {
         return nr.findAll();
     }
+
+    public Niveau findByTitre(String s){
+        return nr.findChampByTitre(s);    }
 }
