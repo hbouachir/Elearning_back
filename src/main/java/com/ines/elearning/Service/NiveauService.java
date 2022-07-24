@@ -22,7 +22,7 @@ public class NiveauService implements INiveauService{
 
     @Override
     public Niveau findOne(long id) {
-        return nr.findById(id).get();
+        return nr.findById(id).orElse(null);
     }
 
     @Override
